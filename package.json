@@ -7,7 +7,8 @@
     "format": "prettier --write --cache .",
     "test:all": "vitest",
     "test": "vitest --dir",
-    "test-01": "vitest --dir ./src/01-clamp"
+    "test-01": "vitest --dir ./src/01-clamp",
+    "test-02": "vitest --dir ./src/02-inRange"
   },
   "devDependencies": {
     "prettier": "^3.2.5",
