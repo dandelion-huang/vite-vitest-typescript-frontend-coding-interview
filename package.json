@@ -1,0 +1,17 @@
+{
+  "name": "vite-vitest-typescript-frontend-coding-interview",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "format": "prettier --write --cache .",
+    "test:all": "vitest",
+    "test": "vitest --dir"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.6",
+    "vitest": "^1.4.0"
+  }
+}
