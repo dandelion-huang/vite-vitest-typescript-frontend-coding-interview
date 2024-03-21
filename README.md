@@ -73,3 +73,4 @@ pnpm test-01
 ## 題目列表
 
 - Day01 - [[`Easy`] 手寫 clamp](src/01-clamp)
+- Day02 - [[`Easy`] 手寫 inRange](src/02-inRange)
