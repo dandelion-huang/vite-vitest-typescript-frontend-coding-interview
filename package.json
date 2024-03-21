@@ -6,7 +6,8 @@
   "scripts": {
     "format": "prettier --write --cache .",
     "test:all": "vitest",
-    "test": "vitest --dir"
+    "test": "vitest --dir",
+    "test-01": "vitest --dir ./src/01-clamp"
   },
   "devDependencies": {
     "prettier": "^3.2.5",
