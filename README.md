@@ -11,6 +11,7 @@
 - Vite
 - Vitest
 - TypeScript
+- Husky
 - Prettier
 
 除此之外會使用 [Codium AI](https://www.codium.ai/) 的 [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Codium.codium) 來協助產生 Test Cases。
@@ -70,7 +71,56 @@ pnpm test-01
 },
 ```
 
+## 程式碼品質
+
+因為想要讓遠端的程式碼品質更可靠，決定花一點時間加上 Git Hooks，要使用的工具是 Husky。
+
+首先在終端機中執行：
+
+```shell
+pnpm dlx husky-init
+```
+
+這個指令會自動新增 `.husky` 資料夾，並在 `package.json` 中添加一些內容：
+
+```json
+"scripts": {
+  "prepare": "husky install"
+},
+"devDependencies": {
+  "husky": "^8.0.0"
+},
+```
+
+接下來再安裝 lint-staged：
+
+```shell
+pnpm add -D lint-staged
+```
+
+接下來我們需要稍微修改一下 `.husky/pre-commit` 的內容：
+
+```shell
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx lint-staged
+```
+
+然後在 `package.json` 中補上相關的設定：
+
+```json
+"lint-staged": {
+  "*.{ts,json,md}": [
+    "prettier --write --cache"
+  ]
+},
+```
+
+這樣就會自動在 commit 前將程式碼排版乾淨囉。
+
 ## 題目列表
 
 - Day01 - [[`Easy`] 手寫 clamp](src/01-clamp)
 - Day02 - [[`Easy`] 手寫 inRange](src/02-inRange)
+- Day03 - [[`Easy`] 手寫 compact](src/03-compact)
