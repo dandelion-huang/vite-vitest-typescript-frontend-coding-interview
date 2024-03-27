@@ -10,7 +10,9 @@
     "test:staged": "vitest run",
     "test": "vitest --dir",
     "test-01": "vitest --dir ./src/01-clamp",
-    "test-02": "vitest --dir ./src/02-inRange"
+    "test-02": "vitest --dir ./src/02-inRange",
+    "test-03": "vitest --dir ./src/03-compact",
+    "test-04": "vitest --dir ./src/04-difference"
   },
   "lint-staged": {
     "*.{ts,json,md}": [
