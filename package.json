@@ -7,6 +7,7 @@
     "prepare": "husky install",
     "format": "prettier --write --cache .",
     "test:all": "vitest",
+    "test:staged": "vitest run",
     "test": "vitest --dir",
     "test-01": "vitest --dir ./src/01-clamp",
     "test-02": "vitest --dir ./src/02-inRange"
@@ -14,6 +15,9 @@
   "lint-staged": {
     "*.{ts,json,md}": [
       "prettier --write --cache"
+    ],
+    "*.ts": [
+      "npm run test:staged"
     ]
   },
   "devDependencies": {

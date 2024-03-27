@@ -14,7 +14,9 @@
 - Husky
 - Prettier
 
-除此之外會使用 [Codium AI](https://www.codium.ai/) 的 [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Codium.codium) 來協助產生 Test Cases。
+原本是使用 [Codium AI](https://www.codium.ai/) 的 [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Codium.codium) 來協助產生 Test Cases。
+
+但後來發現 [Cursor](https://cursor.sh/) + [Supermaven](https://supermaven.com/) 在撰寫測試方面更好用！所以目前 Codium AI 只是輔助性質。
 
 ## 環境設定
 
@@ -113,11 +115,14 @@ npx lint-staged
 "lint-staged": {
   "*.{ts,json,md}": [
     "prettier --write --cache"
+  ],
+  "*.ts": [
+    "npm run test:staged"
   ]
 },
 ```
 
-這樣就會自動在 commit 前將程式碼排版乾淨囉。
+這樣就會自動在 commit 前將程式碼排版乾淨，同時執行測試囉。
 
 ## 題目列表
 
