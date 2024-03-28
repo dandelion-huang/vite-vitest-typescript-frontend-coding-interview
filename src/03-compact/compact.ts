@@ -1,6 +1,6 @@
 // solution 1.
-function compact(array: unknown[]) {
-  const result: unknown[] = []
+function compact<T>(array: T[]) {
+  const result: T[] = []
 
   for (const value of array) {
     if (value) {
@@ -12,7 +12,7 @@ function compact(array: unknown[]) {
 }
 
 // solution 2.
-function compactWithFilter(array: unknown[]) {
+function compactWithFilter<T>(array: T[]) {
   return array.filter(Boolean)
 }
 
