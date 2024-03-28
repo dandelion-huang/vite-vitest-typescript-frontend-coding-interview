@@ -17,9 +17,6 @@
   "lint-staged": {
     "*.{ts,json,md}": [
       "prettier --write --cache"
-    ],
-    "*.ts": [
-      "npm run test:staged"
     ]
   },
   "devDependencies": {
