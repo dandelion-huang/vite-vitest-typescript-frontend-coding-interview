@@ -130,3 +130,4 @@ npx lint-staged
 - Day02 - [[`Easy`] 手寫 inRange](src/02-inRange)
 - Day03 - [[`Easy`] 手寫 compact](src/03-compact)
 - Day04 - [[`Easy`] 手寫 difference](src/04-difference)
+- Day05 - [[`Easy`] 手寫 dropWhile](src/05-dropWhile)
