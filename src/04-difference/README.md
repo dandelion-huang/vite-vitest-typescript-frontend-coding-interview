@@ -76,7 +76,3 @@ function differenceWithSet(array: unknown[], values: unknown[]) {
 最近發現 Cursor + Supermaven 在撰寫測試方面更好用！所以從這天開始會以 Cursor + Supermaven 為主，Codium AI 為輔來撰寫測試。除此之外，目前也覺得 Cursor 和 Supermaven 這個組合比 VS Code + GitHub Copilot 好用。
 
 此外，這次也把測試指令放進 Husky 的 `pre-commit` 裡，這樣就可以在每次 commit 前自動執行測試。
-
-```
-
-```
