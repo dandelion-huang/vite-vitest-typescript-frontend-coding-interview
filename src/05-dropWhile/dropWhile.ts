@@ -24,8 +24,8 @@ function dropWhileWithForLoop<T>(array: T[], predicate: (value: T) => boolean) {
 function dropWhileWithForLoopAndSingleReturn<T>(array: T[], predicate: (value: T) => boolean) {
   let droppedIndex = 0
 
-  for (let i = 0; i < array.length; ++i) {
-    if (!predicate(array[i])) {
+  for (const element of array) {
+    if (!predicate(element)) {
       break
     }
 
