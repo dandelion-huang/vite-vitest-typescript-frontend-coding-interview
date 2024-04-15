@@ -94,7 +94,6 @@ describe('dropRightWhile', () => {
     expect(result).toEqual([])
   })
 })
-
 ```
 
 基本上，只要注意調整邊界條件，從尾部向前遍歷即可，從索引 `array.length - 1` 開始，直到 `predicate` 返回 `false` 或是索引為 `0` 為止。使用 [`Array.prototype.slice`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) 來取得淺拷貝（shallow copy）的時候要記得不包含第二個參數的對應的元素，所以第二個參數會是 `index + 1`。
