@@ -15,7 +15,8 @@
     "test-04": "vitest --dir ./src/04-difference",
     "test-05": "vitest --dir ./src/05-dropWhile",
     "test-06": "vitest --dir ./src/06-dropRightWhile",
-    "test-07": "vitest --dir ./src/07-fill"
+    "test-07": "vitest --dir ./src/07-fill",
+    "test-08": "vitest --dir ./src/08-fromPairs"
   },
   "lint-staged": {
     "*.{ts,json,md}": [
