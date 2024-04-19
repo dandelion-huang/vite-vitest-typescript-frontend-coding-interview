@@ -137,7 +137,7 @@ function fromPairsWithReduce<T>(pairs: T[][]) {
 
 ## 💫 延伸思考
 
-> Record 可以用來對物件的鍵和值進行嚴格的類型控制。
+> `Record` 可以用來對物件的鍵和值進行嚴格的類型控制。
 
 可以簡單寫出如下的範例：
 
