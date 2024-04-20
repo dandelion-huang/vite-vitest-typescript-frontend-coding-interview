@@ -4,7 +4,7 @@ function handlePath(path: string | string[]): (number | string)[] {
   }
 
   if (typeof path === 'string') {
-    return path.split(/[\.\[\]]/).filter((str) => str !== '')
+    return path.split(/[.[\]]/).filter((str) => str !== '')
   }
 
   throw new Error('[get] path must be a string or a string array')

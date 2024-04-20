@@ -54,7 +54,7 @@ describe('get', () => {
 - 首先判斷 `object` 是否為 `null` 或 `undefined`，如果是就直接返回 `defaultValue`（未傳入時 `defaultValue` 為 `undefined`）。
 - 解析路徑為陣列方便迭代：
   - 如果是陣列可以直接使用。
-  - 如果是字串，則利用 [`String.prototype.split`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) 和 [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) `/[\.\[\]]/` 去除所有的 `.` 和 `[` 和 `]`，將字串分割成陣列。
+  - 如果是字串，則利用 [`String.prototype.split`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) 和 [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) `/[.\[\]]/` 去除所有的 `.` 和 `[` 和 `]`，將字串分割成陣列。
 - 遍歷解析路徑後的陣列返回 `result`。這部分可以利用 [`in`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) 運算子來檢查物件是否有指定的 `key`。
 
 > 實務上，如果 `path` 是字串，應該要將 `path` 做 [`String.prototype.trim`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim)，以避免有前後空白的情況。但為了避免模糊焦點，這裡就假設這個 `path` 是經過 `trim` 才傳入 `get` 的。
@@ -68,7 +68,7 @@ function handlePath(path: string | string[]): (number | string)[] {
   }
 
   if (typeof path === 'string') {
-    return path.split(/[\.\[\]]/).filter((str) => str !== '')
+    return path.split(/[.\[\]]/).filter((str) => str !== '')
   }
 
   throw new Error('[get] path must be a string or a string array')
