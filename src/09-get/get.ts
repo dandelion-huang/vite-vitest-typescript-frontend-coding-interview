@@ -11,7 +11,7 @@ function handlePath(path: string | string[]): (number | string)[] {
 }
 
 // solution 1.
-function get<T, D>(object: T, path: number | string | string[], defaultValue?: D): any | D {
+function get<T, D>(object: T, path: number | string | string[], defaultValue?: D) {
   if (typeof path === 'number') {
     return defaultValue
   }
@@ -36,11 +36,7 @@ function get<T, D>(object: T, path: number | string | string[], defaultValue?: D
 }
 
 // solution 2.
-function getWithReduce<T, D>(
-  object: T,
-  path: number | string | string[],
-  defaultValue?: D
-): any | D {
+function getWithReduce<T, D>(object: T, path: number | string | string[], defaultValue?: D) {
   if (typeof path === 'number') {
     return defaultValue
   }

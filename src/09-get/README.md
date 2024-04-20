@@ -78,7 +78,7 @@ function handlePath(path: string | string[]): (number | string)[] {
 然後就可以簡單地寫出第一種解法：
 
 ```typescript
-function get<T, D>(object: T, path: string | string[], defaultValue?: D): any | D {
+function get<T, D>(object: T, path: string | string[], defaultValue?: D) {
   if (!object || !path || path.length === 0) {
     return defaultValue
   }
@@ -105,7 +105,7 @@ function get<T, D>(object: T, path: string | string[], defaultValue?: D): any | 
 
 ```typescript
 // solution 2.
-function getWithReduce<T, D>(object: T, path: string | string[], defaultValue?: D): any | D {
+function getWithReduce<T, D>(object: T, path: string | string[], defaultValue?: D) {
   if (!object || !path || path.length === 0) {
     return defaultValue
   }
