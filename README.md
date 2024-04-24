@@ -135,3 +135,4 @@ npx lint-staged
 - Day07 - [[`Easy`] 手寫 fill](src/07-fill)
 - Day08 - [[`Easy`] 手寫 fromPairs](src/08-fromPairs)
 - Day09 - [[`Medium`] 手寫 get](src/09-get)
+- Day10 - [[`Medium`] 手寫 cloneDeep](src/10-cloneDeep)
