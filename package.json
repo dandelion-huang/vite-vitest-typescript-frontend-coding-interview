@@ -17,7 +17,8 @@
     "test-06": "vitest --dir ./src/06-dropRightWhile",
     "test-07": "vitest --dir ./src/07-fill",
     "test-08": "vitest --dir ./src/08-fromPairs",
-    "test-09": "vitest --dir ./src/09-get"
+    "test-09": "vitest --dir ./src/09-get",
+    "test-10": "vitest --dir ./src/10-cloneDeep"
   },
   "lint-staged": {
     "*.{ts,json,md}": [
